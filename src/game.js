@@ -1,0 +1,1 @@
+class Game {  constructor(){  }}export default
