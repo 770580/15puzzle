@@ -511,7 +511,6 @@
 	        this.activeItems.blank.remove();
 	      }
 	      if (key === 'ArrowLeft') {
-	        console.log((this.activeItems.blankElemPosition - 3) % this.size);
 	        if ((this.activeItems.blankElemPosition - (this.size - 1)) % this.size === 0) return;
 	        this.container.insertBefore(this.activeItems.right, this.activeItems.blank);
 	      }
@@ -598,7 +597,7 @@
 /* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(module) {'use strict';
+	'use strict';
 
 	__webpack_require__(67);
 
@@ -618,8 +617,7 @@
 	grid.generate();
 	var game = new _game2.default(size);
 	game.start();
-	module.hot.accept();
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(68)(module)))
+	// module.hot.accept();
 
 /***/ },
 /* 32 */
@@ -1570,22 +1568,6 @@
 		// When the module is disposed, remove the <style> tags
 		module.hot.dispose(function() { update(); });
 	}
-
-/***/ },
-/* 68 */
-/***/ function(module, exports) {
-
-	module.exports = function(module) {
-		if(!module.webpackPolyfill) {
-			module.deprecate = function() {};
-			module.paths = [];
-			// module.parent = undefined by default
-			module.children = [];
-			module.webpackPolyfill = 1;
-		}
-		return module;
-	}
-
 
 /***/ }
 /******/ ]);

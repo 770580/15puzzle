@@ -36,7 +36,6 @@ class Game {
       this.activeItems.blank.remove();
     }
     if (key === 'ArrowLeft') {
-      console.log((this.activeItems.blankElemPosition - 3) % this.size);
       if ((this.activeItems.blankElemPosition - (this.size - 1)) % this.size === 0) return;
       this.container.insertBefore(this.activeItems.right, this.activeItems.blank);
     }

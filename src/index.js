@@ -8,4 +8,4 @@ const grid = new Grid(parentContainer, size);
 grid.generate();
 const game = new Game(size);
 game.start();
-module.hot.accept();
+// module.hot.accept();
