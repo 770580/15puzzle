@@ -1,10 +1,19 @@
+import Grid from './grid';
+
 class Game {
-  constructor(size) {
+  constructor(parentContainer, size) {
+    this.parentContainer = parentContainer;
     this.size = size;
+    this.new();
     this.container = document.querySelector('.container');
     this.start = this.start.bind(this);
     this.move = this.move.bind(this);
     this.activeItems = {};
+  }
+
+  new() {
+    const grid = new Grid(this.parentContainer, this.size);
+    grid.generate();
   }
 
   start() {
